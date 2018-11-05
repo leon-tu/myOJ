@@ -1,5 +1,6 @@
 #include "../include/linked.h"
 #include "stdlib.h"
+#include "../../utils/util.h"
 
 void main()
 {
@@ -17,5 +18,14 @@ void main()
         LinkList_Display(pListRev);
     }
 
+    ret = LinkList_Insert(pListRev, 5, 20);
+    if (ret) {
+        LOG_PRI("Fail to insert\n");
+    }
+    if (pListRev) {
+        LinkList_Display(pListRev);
+    }
+
+    FreeList(pListRev);
     return;
 }
