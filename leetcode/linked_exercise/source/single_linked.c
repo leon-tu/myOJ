@@ -122,7 +122,7 @@ int LinkList_Insert(SingleLinkedList *pList, int index, int value)
     pPre->pNext = pNode;    
     LOG_PRI("Insert the new node[%p] with value[%d] after the %d order\n",
             pNode, pNode->value, index);
-    
+
     return 0;
 }
 
